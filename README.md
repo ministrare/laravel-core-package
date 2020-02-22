@@ -68,6 +68,7 @@ Example usage:
         'remember' => __('Remember Me'),
     ],
     'message' => isset($message) ? $message : '',
+    'value' => $checkbox,
 ])->Render() ?>
 ```
 
@@ -94,6 +95,7 @@ Example usage:
     'required'=> true,
     'autofocus' => true,
     'message' => isset($message) ? $message : '',
+    'value' => $email,
 ])->Render() ?>
 ```
 
@@ -114,7 +116,11 @@ Example usage:
 ```
 Example usage:
 ```php
-
+<?= Form::Input('password', __('Password'), 'password', [
+    'class' => 'col-md-8 offset-md-2',
+    'message' => isset($message) ? $message : '',
+    'value' =>  '',
+])->Render() ?>
 ```
 
 ### Radio buttons
@@ -140,6 +146,7 @@ Example usage:
         1 => __('Don`t Remember Me'),
     ],
     'message' => isset($message) ? $message : '',
+    'value' =>  '',
 ])->Render() ?>
 ```
 
@@ -204,16 +211,12 @@ Example usage:
 Example usage:
 ```php
 <?= Form::Input('string', __('First name'), 'first_name', [    
-    // optional
-    'autocomplete' => '(boolean) If set, sets the HTML property autocomplete with the slug.',
-    'autofocus' => '(boolean) If set, sets the HTML property autofocus.',
-    'class' => '(string) If set, sets the HTML property class with given value.',
-    'icon' => '(string) If set, shows a font-awesome 4.7.0 icon instead of the label. example: "address-book" will result in "fa fa-address-book".',        
-    'message' => '(string) If set, sets and show the error message.',
-    'placeholder' => '(string) If set, sets the HTML property placeholder with given value.',
-    'required'=> '(boolean) If set, sets the HTML property required.',
-    'small' => '(string) If set, sets the footnote text of the email input field.',
-    'value' => "(string) if set, sets the HTML property value with giving string value",
+    'placeholder' => 'First name',
+    'class' => 'col-md-8 offset-md-2',
+    'required'=> true,
+    'autofocus' => true,
+    'message' => isset($message) ? $message : '',
+    'value' => $first_name,
 ])->Render() ?>
 ```
 
@@ -231,7 +234,7 @@ Example usage:
 <?= Form::Input('textarea', __('Message'), 'message', [
     'class' => 'col-md-8 offset-md-2',
     'rows' => 3,
-    'value' => '',
+    'value' => $message,
 ])->Render() ?>
 ```
 
