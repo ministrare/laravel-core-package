@@ -45,6 +45,14 @@ The other parameters like: string ```label```, string ```slug``` and array ```op
 Possible type options: 
 
 ### Input Types
+- [Checkbox](#Checkbox)
+- [E-mail](#E-mail)
+- [Password](#Password)
+- [Radio buttons](#Radio-buttons)
+- [Select](#Select)
+- [String](#String)
+- [Textarea](#Textarea)
+
 #### Checkbox
 **! Still under development !**
 ```php
