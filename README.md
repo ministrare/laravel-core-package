@@ -35,6 +35,9 @@ The 'Method' function echo`s the HTML form element with the ```@csrf``` element.
 The function requires 2 parameters: ```POST|GET```, ```Route```.
 
 ### Input
+- [Input types](#Input-Types)
+- [Chaining function](#chaining-functions)
+
 Example:
 ```php
 <?= Form::Input('type', 'label (optional)', 'slug (optional)', ['options (optional)'])->Render() ?>
@@ -266,6 +269,8 @@ Example usage:
 The ```End``` function echo`s the HTML closing form tag. \
 The function has no parameters.
 
+[Go Back Up](#Laravel-Core-Package)
+
 ## Utilities
 The Utilities class is supported by a Facade allowing static access to all functions.
 The Utilities class contains 2 major elements:
@@ -288,3 +293,5 @@ Example usage:
 <?= Utilities::keyExists(string $needle, array $haystack) ?>
 ```
 A function to find a key inside a array and returns key.
+
+[Go Back Up](#Laravel-Core-Package)
