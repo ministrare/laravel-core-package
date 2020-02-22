@@ -4,16 +4,16 @@ It contains the following:
  - [Form](#form)
     - [Method](#method)
     - [Input](#inputs)
-        - [Input types](#Input-Types)
-            - [Checkbox](#Checkbox)
-            - [E-mail](#E-mail)
-            - [Password](#Password)
-            - [Radio buttons](#Radio buttons)
-            - [Select](#Select)
-            - [String](#String)
-            - [Textarea](#Textarea)
-        - [Chaining function](#chaining-functions)
-            - [Render](#render)
+    - [Input types](#Input-Types)
+        - [Checkbox](#Checkbox)
+        - [E-mail](#E-mail)
+        - [Password](#Password)
+        - [Radio buttons](#Radio buttons)
+        - [Select](#Select)
+        - [String](#String)
+        - [Textarea](#Textarea)
+    - [Chaining function](#chaining-functions)
+        - [Render](#render)
     - [End](#end)
  - [Utilities](#utilities)
     - [createSlug](#createSlug)
@@ -32,7 +32,7 @@ Example usage:
 <?= Form::Method('POST', route('login')) ?>
 ```
 The 'Method' function echo`s the HTML form element with the ``@csrf`` element. \
-The function requires 2 parameters: "POST|GET", "Route".
+The function requires 2 parameters: ``POST|GET``, ``Route``.
 
 ### Input
 Example:
@@ -44,8 +44,8 @@ The function requires minimal 1 parameter: Type. \
 The other parameters like: string ``label``, string ``slug`` and array ``options`` are optional. \
 Possible type options: 
 
-#### Input Types
-##### Checkbox
+### Input Types
+#### Checkbox
 **! Still under development !**
 ```php
 <?= Form::Input('checkbox', __('label'), 'slug', [
@@ -71,7 +71,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-##### E-mail
+#### E-mail
 ```php
 <?= Form::Input('email', __('label'), 'slug', [    
     // optional
@@ -97,7 +97,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-##### Password
+#### Password
 ```php
 <?= Form::Input('password', __('label'), 'slug', [    
     // optional
@@ -117,7 +117,7 @@ Example usage:
 
 ```
 
-#### Radio buttons
+### Radio buttons
 ```php
 <?= Form::Input('radio', __('label'), 'slug', [
     //Required
@@ -143,7 +143,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-#### Select
+### Select
 ```php
 <?= Form::Input('select', __('label'), 'slug', [
     //Required
@@ -186,7 +186,7 @@ Example usage:
 ])->Render(); ?>
 ```
 
-##### String
+#### String
 ```php
 <?= Form::Input('string', __('label'), 'slug', [    
     // optional
@@ -203,10 +203,21 @@ Example usage:
 ```
 Example usage:
 ```php
-
+<?= Form::Input('string', __('First name'), 'first_name', [    
+    // optional
+    'autocomplete' => '(boolean) If set, sets the HTML property autocomplete with the slug.',
+    'autofocus' => '(boolean) If set, sets the HTML property autofocus.',
+    'class' => '(string) If set, sets the HTML property class with given value.',
+    'icon' => '(string) If set, shows a font-awesome 4.7.0 icon instead of the label. example: "address-book" will result in "fa fa-address-book".',        
+    'message' => '(string) If set, sets and show the error message.',
+    'placeholder' => '(string) If set, sets the HTML property placeholder with given value.',
+    'required'=> '(boolean) If set, sets the HTML property required.',
+    'small' => '(string) If set, sets the footnote text of the email input field.',
+    'value' => "(string) if set, sets the HTML property value with giving string value",
+])->Render() ?>
 ```
 
-##### Textarea
+#### Textarea
 ```php
 <?= Form::Input('textarea', __('label'), 'slug', [
     // optional
@@ -224,7 +235,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-#### Chaining functions
+### Chaining functions
 Most parameters can be overwritten after they are first set. This is possible by chaining multiple set functions. \
 This allows easy usage/overwrites by overwriting most important parameters true there own set function.
 All set functions are displayed below in there proper order:
