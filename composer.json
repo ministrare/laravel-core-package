@@ -1,0 +1,27 @@
+{
+    "name": "ministrare/laravel-core-package",
+    "type": "package",
+    "description": "Library",
+    "authors": [{
+        "name": "Lesley Forn",
+        "email": "ministrare@hotmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ministrare\\LaravelCorePackage\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Form": "Ministrare\\LaravelCorePackage\\Facades\\Form",
+                "Utilities": "Ministrare\\LaravelCorePackage\\Facades\\Utilities"
+            },
+            "providers": [
+                "Ministrare\\LaravelCorePackage\\Providers\\CoreServiceProvider"
+            ]
+        }
+    }
+}
