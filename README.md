@@ -31,17 +31,17 @@ Example usage:
 ```php
 <?= Form::Method('POST', route('login')) ?>
 ```
-The 'Method' function echo`s the HTML form element with the ``@csrf`` element. \
-The function requires 2 parameters: ``POST|GET``, ``Route``.
+The 'Method' function echo`s the HTML form element with the ```@csrf``` element. \
+The function requires 2 parameters: ```POST|GET```, ```Route```.
 
 ### Input
 Example:
 ```php
 <?= Form::Input('type', 'label (optional)', 'slug (optional)', ['options (optional)'])->Render() ?>
 ```
-The ``Form::Input`` function create`s a HTML form input field. \
+The ```Form::Input``` function create`s a HTML form input field. \
 The function requires minimal 1 parameter: Type. \
-The other parameters like: string ``label``, string ``slug`` and array ``options`` are optional. \
+The other parameters like: string ```label```, string ```slug``` and array ```options``` are optional. \
 Possible type options: 
 
 ### Input Types
@@ -244,15 +244,15 @@ All set functions are displayed below in there proper order:
 ```
 
 #### Render
-The ``Form::Input('type')->Render()`` function allows all the given options to be parsed into a view.
-The ``Form::Input`` view will not be loaded without the ``Render()`` function and therefor a **important function** within the chain.
+The ```Form::Input('type')->Render()``` function allows all the given options to be parsed into a view.
+The ```Form::Input``` view will not be loaded without the ```Render()``` function and therefor a **important function** within the chain.
 
 ### End
 Example usage:
 ```php
 <?= Form::End() ?>
 ```
-The 'End' function echo`s the HTML closing form tag. \
+The ```End``` function echo`s the HTML closing form tag. \
 The function has no parameters.
 
 ## Utilities
