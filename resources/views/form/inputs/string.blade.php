@@ -4,7 +4,7 @@
 <?php $error = true; ?>
 @enderror
 
-<div class="{{isset($class) ? "form-group" : "form-group row"}}">
+<div class="{{!isset($class) ? "form-group" : "form-group row"}}">
     @isset($class)
         <div class="{{$class}}">
     @endisset
