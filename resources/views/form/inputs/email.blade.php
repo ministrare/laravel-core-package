@@ -21,7 +21,7 @@
         id="{{ $slug }}_input"
         class="form-control{{($error) ? ' is-invalid' : '' }}{{ isset($size) ? 'form-control-'.$size : '' }}"
         type="email" name="{{ $slug }}"
-        value="{{ old($slug)??$value }}"
+        value="{{ old($slug)??$value??'' }}"
         @isset($autocomplete) autocomplete="{{$slug}}" @endif
         @isset($autofocus) autofocus @endif
         @isset($disabled) disabled @endif
