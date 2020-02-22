@@ -8,7 +8,7 @@ It contains the following:
         - [Checkbox](#Checkbox)
         - [E-mail](#E-mail)
         - [Password](#Password)
-        - [Radio buttons](#Radio buttons)
+        - [Radio buttons](#Radio-buttons)
         - [Select](#Select)
         - [String](#String)
         - [Textarea](#Textarea)
