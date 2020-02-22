@@ -4,12 +4,18 @@
 <?php $error = true; ?>
 @enderror
 
-<div class="{{!isset($class) ? "form-group" : "form-group row"}}">
+<div class="{{isset($class) ? "form-group row" : "form-group"}}">
     @isset($class)
         <div class="{{$class}}">
     @endisset
 
-    <label for="{{ $slug }}_text">@isset($icon)<i class="fas fa-{{$icon}} fa-fw"></i>@else{{$label}}@endif</label>
+    <label for="{{ $slug }}_text">
+        @isset($icon)
+            <i class="fas fa-{{$icon}} fa-fw"></i>
+        @else
+            {{$label}}
+        @endif
+    </label>
 
     <textarea id="{{ $slug }}_text" class="form-control{{($error) ? ' is-invalid' : '' }}" name="{{$slug}}"
        @isset($placeholder) placeholder="{{ $placeholder }}" @endif

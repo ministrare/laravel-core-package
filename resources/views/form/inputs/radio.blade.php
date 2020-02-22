@@ -4,7 +4,7 @@
 <?php $error = true; ?>
 @enderror
 
-<div class="{{!isset($class) ? "form-group" : "form-group row"}}">
+<div class="{{isset($class) ? "form-group row" : "form-group"}}">
     @isset($options)
         @foreach($options as $key => $label)
 
