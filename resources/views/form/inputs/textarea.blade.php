@@ -16,7 +16,7 @@
        @isset($required) required @endif
        @isset($autofocus) autofocus @endif
        @isset($rows) rows="{{ $rows }}" @endif
-    >{{ (old($slug)) ? old($slug) : ((isset($value)) ? $value : '')  }}</textarea>
+    >{{ isset($value) ? $value : '' }}</textarea>
 
     @isset($small)
         <small id="{{ $slug }}_help" class="form-text text-muted">{{ $small }}</small>

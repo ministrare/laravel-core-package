@@ -11,7 +11,7 @@
 
     <label for="{{ $slug }}_input">@isset($icon)<i class="fas fa-{{$icon}} fa-fw"></i>@else{{$label}}@endif</label>
 
-    <input id="{{ $slug }}_input" class="form-control{{ isset($readonly)? "-plaintext" : " " }}{{($error) ? ' is-invalid' : '' }}{{ isset($size) ? 'form-control-'.$size : '' }}" type="text" name="{{ $slug }}" value="{{ (old($slug)) ? old($slug) : (isset($value)) ? $value : '' }}"
+    <input id="{{ $slug }}_input" class="form-control{{ isset($readonly)? "-plaintext" : " " }}{{($error) ? ' is-invalid' : '' }}{{ isset($size) ? 'form-control-'.$size : '' }}" type="text" name="{{ $slug }}" value="{{ isset($value) ? $value : '' }}"
            @isset($placeholder) placeholder="{{ $placeholder }}" @endif
            @isset($required) required @endif
            @isset($autofocus) autofocus @endif
