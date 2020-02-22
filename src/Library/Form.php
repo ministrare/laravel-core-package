@@ -3,6 +3,9 @@
 
 namespace Ministrare\LaravelCorePackage\Library;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\View\View;
+
 class Form
 {
     private $settings = [];
@@ -10,7 +13,7 @@ class Form
     /**
      * @param $method  "POST"|"GET"
      * @param $route  "Route" with or without attributes
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function Method($method, $route)
     {
@@ -89,7 +92,7 @@ class Form
 
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void
+     * @return Factory|View|void
      */
     public function Render()
     {

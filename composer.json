@@ -16,6 +16,7 @@
     "extra": {
         "laravel": {
             "aliases": {
+                "Breadcrumb": "Ministrare\\LaravelCorePackage\\Facades\\Breadcrumb",
                 "Form": "Ministrare\\LaravelCorePackage\\Facades\\Form",
                 "Utilities": "Ministrare\\LaravelCorePackage\\Facades\\Utilities"
             },

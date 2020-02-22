@@ -3,6 +3,7 @@
 namespace Ministrare\LaravelCorePackage\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Ministrare\LaravelCorePackage\Library\Breadcrumb;
 use Ministrare\LaravelCorePackage\Library\Form;
 use Ministrare\LaravelCorePackage\Library\Utilities;
 
@@ -16,6 +17,9 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind('breadcrumb', function($app) {
+            return new Breadcrumb;
+        });
         $this->app->bind('utilities', function($app) {
             return new Utilities;
         });
