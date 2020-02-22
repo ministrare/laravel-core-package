@@ -123,7 +123,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-### Radio buttons
+#### Radio buttons
 ```php
 <?= Form::Input('radio', __('label'), 'slug', [
     //Required
@@ -150,7 +150,7 @@ Example usage:
 ])->Render() ?>
 ```
 
-### Select
+#### Select
 ```php
 <?= Form::Input('select', __('label'), 'slug', [
     //Required
