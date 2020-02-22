@@ -22,7 +22,7 @@
         class="form-control{{ isset($readonly)? "-plaintext" : " " }}{{($error) ? ' is-invalid' : '' }}{{ isset($size) ? 'form-control-'.$size : '' }}"
         type="text"
         name="{{ $slug }}"
-        value="{{ old($slug)??$value }}"
+        value="{{ old($slug)??$value??'' }}"
         @isset($autocomplete) autocomplete="{{$slug}}" @endif
         @isset($autofocus) autofocus @endif
         @isset($disabled) disabled @endif

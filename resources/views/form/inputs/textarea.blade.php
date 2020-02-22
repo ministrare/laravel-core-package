@@ -17,12 +17,15 @@
         @endif
     </label>
 
-    <textarea id="{{ $slug }}_text" class="form-control{{($error) ? ' is-invalid' : '' }}" name="{{$slug}}"
-       @isset($placeholder) placeholder="{{ $placeholder }}" @endif
-       @isset($required) required @endif
-       @isset($autofocus) autofocus @endif
-       @isset($rows) rows="{{ $rows }}" @endif
-    >{{ old($slug)??$value }}</textarea>
+    <textarea
+        id="{{ $slug }}_text"
+        class="form-control{{($error) ? ' is-invalid' : '' }}"
+        name="{{$slug}}"
+        @isset($autofocus) autofocus @endif
+        @isset($placeholder) placeholder="{{ $placeholder }}" @endif
+        @isset($required) required @endif
+        @isset($rows) rows="{{ $rows }}" @endif
+    >{{ old($slug)??$value??'' }}</textarea>
 
     @isset($small)
         <small id="{{ $slug }}_help" class="form-text text-muted">{{ $small }}</small>
