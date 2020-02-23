@@ -2,7 +2,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
 
-            @foreach ($breadcrumbs as $key => $breadcrumb)
+            @foreach ($breadcrumbs as $breadcrumb)
                 @if(!is_array($breadcrumb))
                     <li class="breadcrumb-item active" aria-current="page">{{ $breadcrumb }}</li>
                 @else

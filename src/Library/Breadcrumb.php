@@ -39,8 +39,13 @@ class Breadcrumb
         if(count($this->breadcrumbs) == 0)
             return abort(404, 'Breadcrumb class: No breadcrumbs found');
 
-        $breadcrumbs['breadcrumbs'] = $this->breadcrumbs;
-        unset($this->breadcrumbs);
+        $sortedBreadcrumbs = [];
+        foreach ($this->breadcrumbs as $key => $breadcrumb){
+            $sortedBreadcrumbs[] = $breadcrumb;
+        }
+        $breadcrumbs['breadcrumbs'] = $sortedBreadcrumbs;
+        unset($this->breadcrumbs, $sortedBreadcrumbs);
+
         return view('laravel-core-package::breadcrumbs.breadcrumbs')->with($breadcrumbs);
     }
 }
